@@ -1,0 +1,72 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+
+@use '@material/elevation/mdc-elevation.import.scss' as e;
+
+#homepage {
+  margin: 0 16px;
+}
+
+#home-banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    margin-top: auto;
+  }
+
+  .overline {
+    margin-top: auto;
+  }
+}
+
+#avatar {
+  border-radius: 50%;
+  width: 256px;
+}
+
+#wiiblob {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 50px;
+  text-align: center;
+
+  margin-top: 8px;
+
+  color: #2a172d;
+}
+
+.home-content {
+  margin: 16px 0;
+  padding: 16px;
+  background-color: map-get($colors, bingus, 50);
+
+  text-align: center;
+
+  @include e.mdc-elevation(1);
+
+  h4 {
+    font-weight: 500;
+  }
+
+  span {
+    display: block;
+    margin-top: 8px;
+  }
+
+  .card .card-media-top img {
+    width: 40%;
+    height: 100%;
+
+    display: block;
+    margin: auto;
+
+    object-fit: contain;
+  }
+
+  @include mq(xs) {
+    margin: 16px -16px;
+  }
+}

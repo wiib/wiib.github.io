@@ -1,0 +1,33 @@
+@use '../abstracts/colors' as *;
+
+@use '@material/elevation/mdc-elevation.import.scss' as e;
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  background-color: map-get($colors, bingus, 50);
+  color: black;
+
+  margin: 8px;
+  padding: 16px;
+  
+  flex-basis: 344px - (16px * 2);
+
+  @include e.mdc-elevation(2);
+}
+
+.card-content {
+  text-align: left;
+}
+
+.card-media-top {
+  margin: -16px -16px 16px -16px;
+  
+  background-color: map-get($colors, bingus, 100);
+
+  width: 344px;
+  height: 194px;
+
+  object-fit: cover;
+}

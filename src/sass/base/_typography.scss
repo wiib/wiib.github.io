@@ -1,0 +1,21 @@
+@use "@material/typography/mdc-typography.import" as t;
+
+h4 {
+  @include t.mdc-typography('headline4');
+}
+
+h5 {
+  @include t.mdc-typography('headline5');
+}
+
+.body1 {
+  @include t.mdc-typography('body1');
+}
+
+.body2 {
+  @include t.mdc-typography('body2');
+}
+
+.overline {
+  @include t.mdc-typography('overline');
+}
